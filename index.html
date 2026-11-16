@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b2b">
+  <title>Clinical Academy | BIO 302 Exam 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand"><div class="brand-icon" aria-hidden="true">♥</div><div class="eyebrow">CLINICAL ACADEMY · BIO 302</div></div>
+      <h1>Human Body<br>Practice Lab</h1>
+      <p>Exam 3 preparation · 30 questions · Two ways to learn</p>
+      <div class="topic-strip" aria-label="Quiz topics">
+        <span class="topic-pill">🩸 Blood</span><span class="topic-pill">♥ Blood Vessels</span><span class="topic-pill">◈ Lymphatics</span><span class="topic-pill">✦ Immunity</span>
+      </div>
+    </header>
+    <section id="setup" class="panel">
+      <div class="accent-line"></div>
+      <h2>Choose your learning mode</h2>
+      <p class="muted">Ready for a quick study session or a full exam simulation?</p>
+      <div class="mode-grid">
+        <label class="mode"><input type="radio" name="mode" value="study" checked><span class="mode-icon" aria-hidden="true">📖</span><strong>Study Mode</strong><span>Get instant feedback and explanations after every answer.</span></label>
+        <label class="mode"><input type="radio" name="mode" value="exam"><span class="mode-icon" aria-hidden="true">🩺</span><strong>Exam Mode</strong><span>Complete all 30 questions first, then review your results.</span></label>
+      </div>
+      <p class="muted">Questions are shuffled each attempt. Based on your class study outlines; not an official exam.</p>
+      <button id="start">Start 30-question quiz →</button>
+    </section>
+    <section id="quiz" class="panel" hidden>
+      <div class="topline"><span id="counter"></span><span id="scoreLabel"></span></div>
+      <div class="progress" role="progressbar" aria-label="Quiz progress"><div id="bar"></div></div>
+      <div class="tag" id="topic"></div>
+      <h2 id="question"></h2>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback" aria-live="polite" hidden></div>
+      <button id="next" hidden>Next question →</button>
+    </section>
+    <section id="results" class="panel" hidden>
+      <div class="eyebrow">SESSION COMPLETE</div>
+      <h2>Your results</h2>
+      <div id="finalScore" class="bigscore"></div>
+      <p id="summary"></p>
+      <h3>Review your answers</h3>
+      <div id="review"></div>
+      <button id="restart">Try again ↻</button>
+    </section>
+    <footer>Clinical Academy · Built for curious minds · Works offline</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
